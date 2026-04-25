@@ -3,7 +3,7 @@ import type { Movie } from "../../types/movie";
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "./App.module.css"
 import toast, { Toaster } from 'react-hot-toast';
-import { MovieService } from "../../services/MovieService";
+import { movieService } from "../../services/movieService"
 import MovieGrid from "../MovieGrid/MovieGrid";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
@@ -28,7 +28,7 @@ export default function App() {
 
   const { data, isLoading, isError, isSuccess } = useQuery({
     queryKey: ['movies', movie, currentPage],
-    queryFn: ()=> MovieService(movie, currentPage),
+    queryFn: ()=> movieService(movie, currentPage),
     enabled: movie !== "",
     placeholderData: keepPreviousData,
   });

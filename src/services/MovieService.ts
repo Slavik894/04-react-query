@@ -9,7 +9,7 @@ interface MoviesHttpResponse{
 
 const myToken = import.meta.env.VITE_API_TOKEN;
 
-export const MovieService = async (movie: string, page: number) =>{
+export const movieService = async (movie: string, page: number) =>{
       const response = await axios.get<MoviesHttpResponse>(`/search/movie`, {
             params:{
                 query: movie,
