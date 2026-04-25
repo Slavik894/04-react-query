@@ -11,7 +11,7 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import ReactPaginateModule from "react-paginate";
 import type { ReactPaginateProps } from "react-paginate";
 import type { ComponentType } from "react";
-import { movieService } from "../../services/tempService";
+import { movieService } from "../../services/movieService";
 
 
 type ModuleWithDefault<T> = { default: T };
