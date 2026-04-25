@@ -3,7 +3,6 @@ import type { Movie } from "../../types/movie";
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "./App.module.css"
 import toast, { Toaster } from 'react-hot-toast';
-import { movieService } from "../../services/movieService"
 import MovieGrid from "../MovieGrid/MovieGrid";
 import Loader from "../Loader/Loader";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
@@ -12,6 +11,7 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import ReactPaginateModule from "react-paginate";
 import type { ReactPaginateProps } from "react-paginate";
 import type { ComponentType } from "react";
+import { movieService } from "../../services/MovieService";
 
 
 type ModuleWithDefault<T> = { default: T };
